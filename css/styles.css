@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .searchbar input {
   padding: 10px;
   margin: 0;
@@ -57,13 +60,13 @@ a:active {
 }
 
 .container {
-  width: 900px;
+  max-width: 900px;
   margin: auto;
   display: flex;
 }
 
 main {
-  width: calc(66.666% - 20px);
+  width: 66.666%;
 }
 
 .side-menu {
@@ -95,7 +98,8 @@ main {
   height: 200px;
   background: url(/images//pexels-taryn-elliott-3889919.jpg);
   background-attachment: scroll;
-  background-position: center 1643px;
+  background-size: cover;
+  background-position: center 60%;
 }
 
 .page-footer {
