@@ -86,7 +86,8 @@ main {
   width: 75%;
   text-align: right;
   position: relative;
-  top: 150px;
+  bottom: calc(-15vw + 50px);
+  right: 10px
 }
 
 .logo {
@@ -95,7 +96,7 @@ main {
 }
 
 .page-header {
-  height: 200px;
+  height: 15vw;
   background: url(/images//pexels-taryn-elliott-3889919.jpg);
   background-attachment: scroll;
   background-size: cover;
