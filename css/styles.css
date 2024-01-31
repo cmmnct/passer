@@ -59,49 +59,60 @@ a:active {
   max-width: 100%;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-}
 
-main {
-  width: 66.666%;
-}
-
-.side-menu {
+.container{
   margin: 10px;
-  width: calc(33.333% - 20px);
-  background-color: rgb(87, 144, 165);
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  position: relative;
 }
+
+
+
 
 .logo {
-  width: 25%;
+  aspect-ratio: 1/1;
+  background-image: url(/images/logo.png);
+  width: 10vw;
+  background-size: contain;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+
 }
 
-.searchbar {
-  width: 75%;
-  text-align: right;
-  position: relative;
-  bottom: calc(-15vw + 50px);
-  right: 10px
+ .searchbar {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+
 }
 
-.logo {
-  position: relative;
-  bottom: -150px;
-}
+
+
+
 
 .page-header {
-  height: 15vw;
+  
   background: url(/images//pexels-taryn-elliott-3889919.jpg);
   background-attachment: scroll;
   background-size: cover;
   background-position: center 60%;
+  
 }
+
+ .page-header .container{
+  height: 80px;
+   
+}
+
+@media screen and (min-width:480px) {
+
+  .page-header .container{
+  height: 12vw;
+}
+}
+
 
 .page-footer {
   position: fixed;
@@ -117,17 +128,11 @@ nav {
   padding: 10px;
   position: sticky;
   top: 0;
+  z-index: 10;
   background-color: dimgray;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-}
+
 
 ul li a {
   text-decoration: none;
@@ -139,4 +144,40 @@ ul li a {
 
 ul li a:visited {
   color: bisque;
+}
+
+@media screen and (min-width:900px) {
+
+ 
+
+  nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.side-menu {
+  margin: 10px;
+  width: calc(33.333% - 20px);
+  background-color: rgb(87, 144, 165);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+main {
+  width: 66.666%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+
+
+
 }
