@@ -1,9 +1,9 @@
 .searchbar input {
   padding: 10px;
   margin: 0;
-  border-radius: 5px 0 0 5px ;
+  border-radius: 5px 0 0 5px;
   border: 1px;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 form {
   margin: 0;
@@ -16,21 +16,17 @@ form {
   border-radius: 5px;
   border: 1px;
   aspect-ratio: 1/1;
-  border-radius:  0 5px 5px 0  ;
+  border-radius: 0 5px 5px 0;
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-
-body { 
-    background-color: burlywood;
-    margin: 0;
+body {
+  background-color: burlywood;
+  margin: 0;
+  margin-bottom: 150px;
 }
 
 div > p {
@@ -38,25 +34,25 @@ div > p {
 }
 
 a:link {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 /* visited link */
 a:visited {
-  color: #00FF00;
+  color: #00ff00;
 }
 
 /* mouse over link */
 a:hover {
-  color: #FF00FF;
+  color: #ff00ff;
 }
 
 /* selected link */
 a:active {
-  color: #0000FF;
+  color: #0000ff;
 }
 
-.article-poster{
+.article-poster {
   max-width: 100%;
 }
 
@@ -67,35 +63,33 @@ a:active {
   width: 25%;
 }
 
-
-.container{
+.container {
   width: 900px;
   margin: auto;
   display: flex;
 }
 
-.logo{
+.logo {
   width: 25%;
 }
 
 .searchbar {
-width: 75%;
-text-align: right;
-position: relative;
-top: 150px;
+  width: 75%;
+  text-align: right;
+  position: relative;
+  top: 150px;
 }
 
 .logo {
-position: relative;
-bottom: -150px
+  position: relative;
+  bottom: -150px;
 }
 
-.page-header{
+.page-header {
   height: 200px;
-  background:url(/images//pexels-taryn-elliott-3889919.jpg);
+  background: url(/images//pexels-taryn-elliott-3889919.jpg);
   background-attachment: scroll;
   background-position: center 1643px;
-
 }
 
 .page-footer {
@@ -106,46 +100,47 @@ bottom: -150px
   height: 100px;
   padding-top: 20px;
   background-color: darkslategrey;
+  color: aliceblue;
+  font-size: 24px;
 }
 
 nav {
   padding: 10px;
   position: sticky;
   top: 0;
-  background-color: dimgray
+  background-color: dimgray;
 }
 
-nav ul{
+nav ul {
   list-style: none;
   margin: 0;
-  padding:0;
+  padding: 0;
   display: flex;
   justify-content: center;
   margin: 10px;
 }
 
-ul li a{
+ul li a {
   text-decoration: none;
   color: azure;
   padding: 10px;
   margin: 1px;
   font-size: 24px;
-
 }
 
-ul li a:visited{
+ul li a:visited {
   color: bisque;
 }
 main {
   width: 66.666%;
 }
-.side-menu{
+.side-menu {
   position: fixed;
   right: 20px;
   top: 300px;
   width: 30%;
   background-color: rgb(87, 144, 165);
   border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
 }
