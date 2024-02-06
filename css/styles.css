@@ -6,6 +6,12 @@ body {
   margin-bottom: 200px;
   font-family: "Roboto", sans-serif;
 }
+h1 {
+  margin: 20px;
+  font-size: min(12vw, 64px);
+  text-align: center;
+  font-weight: 300;
+}
 
 * {
   box-sizing: border-box;
@@ -70,6 +76,7 @@ a:active {
 
 .container {
   position: relative;
+  padding: 20px;
 }
 
 .logo {
@@ -109,10 +116,14 @@ a:active {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 48px;
-  padding-top: 20px;
+  height: 64px;
   background-color: darkslategrey;
   box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.page-footer .container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 nav {
@@ -142,6 +153,24 @@ nav ul {
   padding: 0;
   margin: 10px;
 }
+.side-menu {
+  position: fixed;
+  bottom: 64px;
+  left: 0;
+  background-color: rgb(87, 144, 165);
+  width: 100%;
+}
+
+.side-menu ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.side-menu ul li a {
+  font-size: 18px;
+}
 
 @media screen and (min-width: 480px) {
   .page-header .container {
@@ -154,26 +183,39 @@ nav ul {
 }
 
 @media screen and (min-width: 900px) {
+  .xs,
+  .container.xs {
+    display: none;
+  }
+
+  .col-4 {
+    width: 33.333%;
+  }
+
+  .col-8 {
+    width: 66.666%;
+  }
+
   nav ul {
     display: flex;
     justify-content: center;
   }
 
-  .logo {
-    width: max(10vw, 36px);
-  }
-
   .side-menu {
+    display: block;
+    position: sticky;
+    top: 85px;
     margin: 10px;
-    width: calc(33.333% - 20px);
-    background-color: rgb(87, 144, 165);
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     padding: 20px;
   }
+  .side-menu ul {
+    display: block;
+  }
 
-  main {
-    width: 66.666%;
+  .logo {
+    width: max(10vw, 36px);
   }
 
   .container {
@@ -183,6 +225,14 @@ nav ul {
   }
 
   .page-footer {
-    height: 100px;
+    height: 200px;
+  }
+  .bd {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 10px;
+    padding: 0 20px;
+    border-bottom: solid 5px rgba(255, 255, 255, 0.4);
+    border-radius: 10px 10px 0 0;
+    color: rgba(0, 0, 0, 0.3);
   }
 }
