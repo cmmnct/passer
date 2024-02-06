@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap");
+
+body {
+  background-color: burlywood;
+  margin: 0;
+  margin-bottom: 200px;
+  font-family: "Roboto", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -59,69 +68,51 @@ a:active {
   max-width: 100%;
 }
 
-
-.container{
-  margin: 10px;
+.container {
   position: relative;
 }
-
-
-
 
 .logo {
   aspect-ratio: 1/1;
   background-image: url(/images/logo.png);
-  width: 10vw;
+  width: 36px;
   background-size: contain;
   position: absolute;
   bottom: 20px;
   left: 20px;
-
-
 }
 
- .searchbar {
+.searchbar {
   position: absolute;
   right: 20px;
   bottom: 20px;
   z-index: 10;
-
 }
 
-
-
-
-
 .page-header {
-  
   background: url(/images//pexels-taryn-elliott-3889919.jpg);
   background-attachment: scroll;
   background-size: cover;
   background-position: center 60%;
-  
 }
 
- .page-header .container{
+.page-header .container {
   height: 80px;
-   
 }
 
-@media screen and (min-width:480px) {
-
-  .page-header .container{
-  height: 12vw;
+.hidden-xs {
+  display: none;
 }
-}
-
 
 .page-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 48px;
   padding-top: 20px;
   background-color: darkslategrey;
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.3);
 }
 
 nav {
@@ -130,9 +121,8 @@ nav {
   top: 0;
   z-index: 10;
   background-color: dimgray;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
 }
-
-
 
 ul li a {
   text-decoration: none;
@@ -146,38 +136,53 @@ ul li a:visited {
   color: bisque;
 }
 
-@media screen and (min-width:900px) {
-
- 
-
-  nav ul {
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
   margin: 10px;
 }
 
-.side-menu {
-  margin: 10px;
-  width: calc(33.333% - 20px);
-  background-color: rgb(87, 144, 165);
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+@media screen and (min-width: 480px) {
+  .page-header .container {
+    height: 19vw;
+  }
+
+  .hidden-xs {
+    display: block;
+  }
 }
 
-main {
-  width: 66.666%;
-}
+@media screen and (min-width: 900px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-}
+  .logo {
+    width: max(10vw, 36px);
+  }
 
+  .side-menu {
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    background-color: rgb(87, 144, 165);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
 
+  main {
+    width: 66.666%;
+  }
 
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+  }
+
+  .page-footer {
+    height: 100px;
+  }
 }
