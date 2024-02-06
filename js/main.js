@@ -1,25 +1,38 @@
-const myName = "Mark";
-const myPassword = "1234";
-let loggedIn = false;
 
-//checkPassword(prompt("Geef je Wachtwoord op"));
 
-function checkPassword(value) {
-    if (value == myPassword) {
-        alert("Je bent succesvol ingelogd!")
-        return true;
-    }
-    else if (confirm(`Helaas ${myName}, dit wachtwoord is onjuist... Wil je opnieuw proberen?`))
-        checkPassword(prompt("Geef je Wachtwoord op"));
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
 }
 
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
 
-let merk = "Toyota";
-let type = "Prius";
-let kleur = "metallic blauw";
-let omschrijving = "Anniversary model met exclusieve kleur en vele extra's!"
+var slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
-let myAge = 45;
-let myIncome = 50000;
-let myAverageweight = 78.5;
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+}
