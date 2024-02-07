@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/modal.css" />
     <script src="js/main.js"></script>
     <title>B&B Treehouse</title>
   </head>
@@ -51,6 +51,7 @@
               <img src="/images/resort1.jpg" class="article-poster" alt="" />
               <h2>Item 1</h2>
               <p>
+                <img src="images/logo.png" alt="logo">
                 <a href="https://www.w3schools.com">Stukje tekst </a>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 fermentum, tortor ut dapibus volutpat, justo dolor molestie
@@ -245,78 +246,111 @@
           <span class="material-symbols-outlined"> search </span>
         </div>
         <div class="container lg">
-          <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-              <div class="mySlides">
-                <div class="numbertext">1 / 4</div>
-                <img src="images/img_nature_wide.jpg" style="width: 100%" />
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">2 / 4</div>
-                <img src="images/img_snow_wide.jpg" style="width: 100%" />
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">3 / 4</div>
-                <img src="images/img_mountains_wide.jpg" style="width: 100%" />
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">4 / 4</div>
-                <img src="images/img_lights_wide.jpg" style="width: 100%" />
-              </div>
-
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-              <div class="caption-container">
-                <p id="caption"></p>
-              </div>
-
-              <div class="row">
-                <div class="col-4">
-                  <img
-                    class="demo cursor"
-                    src="images/img_nature_wide.jpg"
-                    style="width: 100%"
-                    onclick="currentSlide(1)"
-                    alt="Nature and sunrise"
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="demo cursor"
-                    src="images/img_snow_wide.jpg"
-                    style="width: 100%"
-                    onclick="currentSlide(2)"
-                    alt="Snow"
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="demo cursor"
-                    src="images/img_mountains_wide.jpg"
-                    style="width: 100%"
-                    onclick="currentSlide(3)"
-                    alt="Mountains and fjords"
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="demo cursor"
-                    src="images/img_lights_wide.jpg"
-                    style="width: 100%"
-                    onclick="currentSlide(4)"
-                    alt="Northern Lights"
-                  />
-                </div>
-              </div>
-            </div>
+          <div class="col-4">
+            <img
+              src="images/img_nature.jpg"
+              style="width: 100%"
+              onclick="openModal();currentSlide(1)"
+              class="hover-shadow cursor"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="images/img_snow.jpg"
+              style="width: 100%"
+              onclick="openModal();currentSlide(2)"
+              class="hover-shadow cursor"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="images/img_mountains.jpg"
+              style="width: 100%"
+              onclick="openModal();currentSlide(3)"
+              class="hover-shadow cursor"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="images/img_lights.jpg"
+              style="width: 100%"
+              onclick="openModal();currentSlide(4)"
+              class="hover-shadow cursor"
+            />
           </div>
         </div>
       </footer>
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="images/img_nature_wide.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="images/img_snow_wide.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="images/img_mountains_wide.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="images/img_lights_wide.jpg" style="width: 100%" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <img
+              class="demo cursor"
+              src="images/img_nature_wide.jpg"
+              style="width: 100%"
+              onclick="currentSlide(1)"
+              alt="Nature and sunrise"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              class="demo cursor"
+              src="images/img_snow_wide.jpg"
+              style="width: 100%"
+              onclick="currentSlide(2)"
+              alt="Snow"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              class="demo cursor"
+              src="images/img_mountains_wide.jpg"
+              style="width: 100%"
+              onclick="currentSlide(3)"
+              alt="Mountains and fjords"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              class="demo cursor"
+              src="images/img_lights_wide.jpg"
+              style="width: 100%"
+              onclick="currentSlide(4)"
+              alt="Northern Lights"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
