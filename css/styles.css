@@ -60,38 +60,49 @@ a:active {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 992px;
   margin: auto;
   display: flex;
 }
 
 main {
-  width: 66.666%;
+  width: 75%;
 }
 
 .side-menu {
-  margin: 10px;
-  width: calc(33.333% - 20px);
+  margin: 30px;
+  margin-top: 85px;
+  width: 25%;
   background-color: rgb(87, 144, 165);
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  align-self: flex-start;
+  position: sticky;
+  top: 85px;
+}
+
+.side-menu nav ul li a {
+  font-size: min(2vw, 24px);
 }
 
 .logo {
   width: 25%;
+  position: relative;
+  bottom: -137px;
+  align-self: flex-end;
+}
+
+.logo img {
+  width: 48px;
+  display: block;
 }
 
 .searchbar {
   width: 75%;
   text-align: right;
   position: relative;
-  top: 150px;
-}
-
-.logo {
-  position: relative;
-  bottom: -150px;
+  bottom: -137px;
+  align-self: flex-end;
 }
 
 .page-header {
@@ -116,15 +127,19 @@ nav {
   padding: 10px;
   position: sticky;
   top: 0;
+}
+.nav-main {
   background-color: dimgray;
+}
+.nav-main ul {
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
   margin: 10px;
 }
 
