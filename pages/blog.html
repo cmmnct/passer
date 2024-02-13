@@ -9,37 +9,59 @@
 
 
     <style>
-      .flex-container {
+
+      * {
+        box-sizing: border-box;
+      }
+      .row {
         display: flex;
         flex-wrap: wrap;
-        background-color: DodgerBlue;
+        margin-bottom: 20px;
       }
-      .flex-container > div {
-        background-color: #f1f1f1;
-        margin: 10px;
-        padding: 20px;
-        font-size: 30px;
+      .col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+      
+      .row div{
+        background-color: rgba(130, 165, 199, 0.792);
+        border: dashed 1px rgb(51, 51, 51);
+        height: 50px;
+        padding: 10px;
       }
+      
     </style>
   </head>
   <body>
-    <h1>Create a Flex Container</h1>
-    <div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
+
+    <div class="row">
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
     </div>
-    <p>
-      A Flexible Layout must have a parent element with the
-      <em>display</em> property set to <em>flex</em>.
-    </p>
-    <p>
-      Direct child elements(s) of the flexible container automatically becomes
-      flexible items.
-    </p>
+     <div class="row">
+      <div class="col-4">col-4</div>
+      <div class="col-4">col-4</div>
+      <div class="col-4">col-4</div>
+    </div>
+     <div class="row">
+      <div class="col-2">col-2</div>
+      <div class="col-8">col-8</div>
+      <div class="col-2">col-2</div>
+    </div>
+    <div class="row">
+      <div class="col-3">col-3</div>
+      <div class="col-6">col-6</div>
+      <div class="col-3">col-3</div>
+    </div>
   </body>
 </html>
